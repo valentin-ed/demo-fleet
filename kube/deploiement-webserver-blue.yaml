@@ -4,8 +4,8 @@ items:
   kind: Deployment
   metadata:
     labels:
-      app: webapps
-    name: green
+      app: webappsblue
+    name: blue
     namespace: default
   spec:
     progressDeadlineSeconds: 600
@@ -13,7 +13,7 @@ items:
     revisionHistoryLimit: 10
     selector:
       matchLabels:
-        app: webapps
+        app: webappsblue
     strategy:
       rollingUpdate:
         maxSurge: 25%
@@ -23,12 +23,12 @@ items:
       metadata:
         creationTimestamp: null
         labels:
-          app: webapps
+          app: webappsblue
       spec:
         containers:
         - image: jpetazzo/color
           imagePullPolicy: Always
-          name: green
+          name: blue
           resources:
             requests:
               cpu: "0.1"
