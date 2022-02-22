@@ -30,7 +30,7 @@ items:
         containers:
         - image: jpetazzo/color
           imagePullPolicy: Always
-          name: blue
+          name: green
           resources:
             requests:
               cpu: "0.1"
