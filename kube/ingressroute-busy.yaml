@@ -1,0 +1,16 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: webapps
+spec:
+  entryPoints:
+  - websecure
+  - web
+  routes:
+  - kind: Rule
+    match: Host(`webapps.demodehon.cloud-ed.fr`)
+    services:
+    - name: blue
+      port: 80
+  tls:
+    certResolver: le
