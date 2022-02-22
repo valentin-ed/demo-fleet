@@ -7,7 +7,7 @@ items:
       deployment.kubernetes.io/revision: "2"
     labels:
       app: webapps
-    name: blue
+    name: green
     namespace: default
   spec:
     progressDeadlineSeconds: 600
