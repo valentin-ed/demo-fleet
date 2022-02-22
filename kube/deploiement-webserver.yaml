@@ -6,7 +6,7 @@ items:
     annotations:
       deployment.kubernetes.io/revision: "2"
     labels:
-      app: blue
+      app: webapps
     name: blue
     namespace: default
   spec:
@@ -15,7 +15,7 @@ items:
     revisionHistoryLimit: 10
     selector:
       matchLabels:
-        app: blue
+        app: webapps
     strategy:
       rollingUpdate:
         maxSurge: 25%
@@ -25,7 +25,7 @@ items:
       metadata:
         creationTimestamp: null
         labels:
-          app: blue
+          app: webapps
       spec:
         containers:
         - image: jpetazzo/color
