@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+  name: webapps
+  namespace: default
+spec:
+  ports:
+  - port: 80
+  selector:
+    app: blue

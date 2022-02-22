@@ -10,7 +10,7 @@ spec:
   - kind: Rule
     match: Host(`webapps.demodehon.cloud-ed.fr`)
     services:
-    - name: blue
+    - name: webapps
       port: 80
   tls:
     certResolver: le
